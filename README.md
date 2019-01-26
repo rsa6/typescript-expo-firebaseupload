@@ -8,3 +8,5 @@
 ## install
 - yarn add firebase
 - yarn add -D @types/firebase
+
+...

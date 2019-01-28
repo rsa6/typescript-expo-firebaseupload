@@ -16,7 +16,7 @@
 - image picker from (camera roll)
 - camera flip...
 - firebase upload image
-- firebase notification
+- firebase notification (need expo login on bash)
 
 ## firebase setting
 - storage permission config (anyone can upload)

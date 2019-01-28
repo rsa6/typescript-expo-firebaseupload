@@ -69,7 +69,7 @@ class UploadScreen extends React.Component<object, UploadScreenState> {
       })
       .catch((error: any) => {
         console.log(error);
-      })
+      });
   }
 
   public render() {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View } from 'react-native';
 import styles from '../styles';
 import CameraScreen from './CameraScreen';
+import CameraFlip from './CameraFlip';
 
 class Main extends React.Component<object, object> {
   
@@ -10,10 +11,9 @@ class Main extends React.Component<object, object> {
       // <View style={styles.container}>
       //   <Text style={styles.textH1}>Main</Text>
       // </View>
-      <CameraScreen />
+      <View />
     );
   }
 }
-
 
 export default Main;

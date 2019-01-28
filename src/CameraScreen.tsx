@@ -67,15 +67,17 @@ class CameraScreen extends React.Component<object, CameraScreenState> {
     let { image } = this.state;
     return (
       <ScrollView style={{flex: 1}} contentContainerStyle={styles.cameraContainer}>
-        <Button title="launchCameraAsync" onPress={this.useCameraHandler} />
+        <Button 
+          title="launchCameraAsync" 
+          onPress={this.useCameraHandler} />
         <Button
           title="launchImageLibraryAsync"
           onPress={this.useLibraryHandler}
         />
+        
         {this.state.uri && <Image source={{ uri: this.state.uri }} style={{ width: 200, height: 200 }} />}
-        <Text style={styles.paragraph}>
-          {JSON.stringify(this.state.result)}
-        </Text>
+        
+        <Text style={styles.paragraph}>{JSON.stringify(this.state.result)}</Text>
 
         <Button
           title="Pick an image from camera roll"

@@ -13,5 +13,7 @@
 
 ## functions 
 - camera
+- image picker from (camera roll)
+- camera flip...
 - firebase upload image
 - firebase notification

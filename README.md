@@ -10,3 +10,8 @@
 - yarn add -D @types/firebase
 
 ...
+
+## functions 
+- camera
+- firebase upload image
+- firebase notification

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Button, ScrollView, StyleSheet, Image } from 'react-native';
+import { Text, View, Button, ScrollView, Image } from 'react-native';
 import { ImagePicker, Permissions } from 'expo';
 import styles from '../styles';
 
@@ -19,12 +19,12 @@ class CameraScreen extends React.Component<object, CameraScreenState> {
     }
   }
 
-  askPermissionsAsync = async () => {
+  private askPermissionsAsync = async () => {
     await Permissions.askAsync(Permissions.CAMERA);
     await Permissions.askAsync(Permissions.CAMERA_ROLL);
   };
 
-  useCameraHandler = async () => {
+  private useCameraHandler = async () => {
     await this.askPermissionsAsync();
     let result = await ImagePicker.launchCameraAsync({
       allowsEditing: true,
@@ -37,7 +37,7 @@ class CameraScreen extends React.Component<object, CameraScreenState> {
     });
   };
 
-  useLibraryHandler = async () => {
+  private useLibraryHandler = async () => {
     await this.askPermissionsAsync();
     let result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
@@ -50,7 +50,7 @@ class CameraScreen extends React.Component<object, CameraScreenState> {
     });
   };
 
-  _pickImage = async () => {
+  private _pickImage = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
       allowsEditing: true,
       aspect: [4, 3],
@@ -63,7 +63,7 @@ class CameraScreen extends React.Component<object, CameraScreenState> {
     }
   };
 
-  render() {
+  public render() {
     let { image } = this.state;
     return (
       <ScrollView style={{flex: 1}} contentContainerStyle={styles.cameraContainer}>
